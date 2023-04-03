@@ -1,0 +1,23 @@
+#use same as jpremium login
+mysql:
+  host: localhost
+  port: 3306
+  database: mydatabase
+  username: myuser
+  password: mypassword
+
+
+spam-to-add-email: true
+#default spam per 5 seconds
+spam-interval: 5
+#----------------------------------------------------
+# Configure messages here!
+
+prefix: "&bJSpam §7» "
+
+invalid-command: "Invalid command. Use /addemail <email> <confirm_email>"
+invalid-email: "Invalid email!"
+mismatch-email: "Email and confirmation email do not match."
+success: "Email address updated successfully."
+faliure: "An error occurred while updating your email address."
+no-email: "You do not have a verified email! Use /email"

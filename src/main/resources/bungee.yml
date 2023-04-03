@@ -1,0 +1,5 @@
+name: JSpam
+author: _w41k3r
+version: '${project.version}'
+main: me.w41k3r.jspam.JSpam
+depends: [JPremium]
