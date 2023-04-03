@@ -3,16 +3,13 @@ package me.w41k3r.jspam;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Command;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Level;
-
 import static me.w41k3r.jspam.Utils.getStr;
 import static me.w41k3r.jspam.Utils.msg;
-
 
 public class AddEmailCommand extends Command {
 
@@ -81,7 +78,6 @@ public class AddEmailCommand extends Command {
         } catch (SQLException e) {
             player.sendMessage(getStr("faliure"));
             plugin.getLogger().log(Level.SEVERE, "Error updating email address for player " + player.getName(), e);
-            //plugin.getLogger().info("jdbc:mysql://" + hostname + ":" + port + "/" + database + username+ password);
         } finally {
             // Close the statement and connection
             try {

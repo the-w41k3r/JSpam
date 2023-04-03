@@ -1,5 +1,4 @@
 package me.w41k3r.jspam;
-import net.md_5.bungee.api.plugin.PluginManager;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.event.PostLoginEvent;
 import net.md_5.bungee.api.plugin.Listener;
@@ -17,7 +16,6 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
 import static me.w41k3r.jspam.Utils.getStr;
-import static me.w41k3r.jspam.Utils.msg;
 
 
 public class JSpam extends Plugin implements Listener {
@@ -31,28 +29,15 @@ public class JSpam extends Plugin implements Listener {
     private String password;
     private Configuration config;
 
-    private String prefix;
 
 
     @Override
     public void onEnable() {
 
-        //If Jpremium not fou
-//        if (getProxy().getPluginManager().getPlugin("JPremium") == null) {
-//            getLogger().severe("JPremium not found! Disabling plugin...");
-//            return;
-//        }
-
-        // Load configuration from config.yml
         loadConfig();
-
-        // Register listener
         getProxy().getPluginManager().registerListener(this, this);
-
         getProxy().getPluginManager().registerCommand(this, new AddEmailCommand(this));
-
         instance = this;
-
 
         getLogger().info("");
         getLogger().info("     ██╗███████╗██████╗  █████╗ ███╗   ███╗");
